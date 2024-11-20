@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* p {
+            font-size: 18px;
+            margin: 10px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        } */
+    </style>
 </head>
 
 <body>
@@ -15,7 +25,8 @@
     <h1 class="heading" style="display: none;">zzsfdz</h1>
     <h1 id="heading" style="display: none;">zzsfdz</h1>
     <h1 id="heading" style="display: none;">zzsfdz</h1> -->
-    <div class="table-container"></div>
+    <!-- <div class="table-container"></div> -->
+    <!-- 
     <table>
         <thead>
             <tr>
@@ -49,56 +60,177 @@
                 <td></td>
             </tr>
         </tbody>
-    </table>
-    <script>
-        const cl = console.log
-        console.dir(document)
-        const data = [
-            { id: 1, name: "Vishnu", batch: "22r", course: "Full Stack", isMockCleared: true, }, //row
-            { id: 2, name: "Sahasra", batch: "22r", course: "Full Stack", isMockCleared: true, }, //row
-            { id: 3, name: "Vijay", batch: "22r", course: "Full Stack", isMockCleared: true, }, //row
-            { id: 4, name: "Anusha", batch: "22r", course: "Full Stack", isMockCleared: true,},
-            { id: 5, name: "Sathwik", batch: "22r", course: "Full Stack",isMockCleared: true, },
-        ];
-        const tableContainer = document.querySelector(".table-container")
-        const table = document.createElement("table");
-        const thead = document.createElement("thead")
-        const tbody = document.createElement("tbody")
-        const tableHeadingRow = document.createElement("tr");
+    </table> -->
+    <!-- <p class="text">Paragraph 1</p>
+    <p class="text">Paragraph 2</p>
+    <p class="text">Paragraph 3</p>
+
+    <div id="parent">
+        <p>Text inside a paragraph</p>
+        This is a comment
+      </div>
+
+      <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+
+      <p>This is the first paragraph.</p>
+      <p>This is the second paragraph.</p>
+      <p>This is the third paragraph.</p> -->
+      <div id="lists">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+      </div>
+
+      <div id="parent1">
+        <p class="class">First Parent Child</p>
+      </div>
+
+      <div id="parent2">
+        <p class="class">Second Parent Child</p>
+      </div>
+    <script type="module">
+        import {data} from "./data.js"
+
+        console.log(data)
+        const secParent = document.querySelector("#parent2")
+        // console.log(secParent.childNodes[1].textContent = "Console...")
+        const child2 =secParent.childNodes[1]
+        console.log(child2)
+        console.dir(child2.parentNode.previousElementSibling.childNodes[1].textContent) 
         
+        // const secChild = document.
+        // im at second child -> parent2 -> sibling of parent2 = parent1 => children || childNode => p
+        // const child = document.querySelector(".class").style.color = "green"
+        // console.log(child)
+        // 1.getting elements => class
+        // const div = document.querySelector("#lists")
+        // const li = document.querySelectorAll(".item")
+        // console.log(li)
+        // li.forEach((w)=> console.dir(w.style.color = "violet"))
+        // console.log(Array.from(li))
+        // Array.from(li).forEach(element => console.log(element));
 
-        const headers = [];
-        for(keys in data[0]){
-            headers.push(keys)
-        }
+        // for(ele of li){
+        //     console.log(ele)
+        // }
+        // for(ele of )
+        // for(ele of div.children){
+            //     console.log(ele)
+            // }
+            // const arr = Array.from(div.children)
+            // console.log(arr)
+            // arr.forEach(element => element.style.color = "yellow");
+            // const lis = document.querySelectorAll(".item")
+            // lis.forEach((el)=> console.log(el))
+            // div.forEach((el)=>console.log(el))
+            // console.log(lis)
+            // console.log(div.children)
 
-        for(ele of headers){
-            const th = document.createElement("th")
-            th.textContent = ele[0].toUpperCase() + ele.slice(1) //karunakar =>K + ele.slice(1)
-            tableHeadingRow.appendChild(th)
-        }
+        // Array.from()
 
-        for(objs of data){
-            const tableDataRows = document.createElement("tr")
-            for(key in objs){
-                console.log(key)
-                const td = document.createElement("td")
-                if(key == "isMockCleared"){
-                        td.textContent = objs[key] ? "Cleared" : "Not Cleared"
-                    }else{
-                        td.textContent = objs[key]
-                    }
-                tableDataRows.appendChild(td)
-            }
-            tbody.appendChild(tableDataRows)
-        }
 
-        thead.appendChild(tableHeadingRow);
-        table.appendChild(thead)
-        table.appendChild(tbody)
+        // console.log(lis[0].textContent.style.fontSize)
+        // console.log(lis[1].textContent.style.fontSize)
+        // console.log(lis[2].textContent.style.fontSize)
 
-        tableContainer.appendChild(table)
+        // console.dir(div)
+        // div.style.color = "red"
+       
+    //     const ps = document.querySelectorAll(".text")   
+    //     console.log(ps.forEach((p)=>p.style.color = "blue"))
 
+    //     const parent = document.getElementById('parent');
+    //     console.log(parent.childNodes[3].textContent)
+    //     console.dir(parent.parentNode.children[4].children[1].textContent)
+    //     const del = parent.parentNode.children[4].children[1]
+    //     del.remove()
+
+    //     const lists = document.getElementById("list");
+        
+    //     for(ele of Array.from(lists.children)){
+    //         console.log(ele)
+    //         const n = document.createElement("li");
+    //         lists.insertBefore(n, lists.children[1])
+    //         n.textContent = "item2"
+    //         ele.style.color = "red"
+    //         ele.style.fontSize = "18px"
+    //         ele.style.background = "green"
+    //         ele.style.display = "inline"
+    //     }
+    //     const secondParagraph = document.querySelectorAll('p')[1];
+
+    //     const previous = secondParagraph.previousElementSibling;
+    //     const next = secondParagraph.nextElementSibling;
+        
+    //      previous.classList.add('highlight'); // Highlight previous paragraph
+    //      next.classList.add('highlight'); 
+        
+    //    const cl = console.log
+        // console.dir(document)
+        // const data = [
+        //     { id: 1, name: "Vishnu", batch: "22r", course: "Full Stack", isMockCleared: true, }, //row
+        //     { id: 2, name: "Sahasra", batch: "22r", course: "Full Stack", isMockCleared: true, }, //row
+        //     { id: 3, name: "Vijay", batch: "22r", course: "Full Stack", isMockCleared: true, }, //row
+        //     { id: 4, name: "Anusha", batch: "22r", course: "Full Stack", isMockCleared: true,},
+        //     { id: 5, name: "Sathwik", batch: "22r", course: "Full Stack",isMockCleared: true, },
+        // ];
+        // const tableContainer = document.querySelector(".table-container")
+        // const table = document.createElement("table");
+        // const rows = table.insertRow(1)
+        // const cols = rows.insertCell(5)
+        // const thead = document.createElement("thead")
+        // const tbody = document.createElement("tbody")
+        // const tableHeadingRow = document.createElement("tr");
+        console.dir(document)
+
+        // const headers = [];
+        // for(keys in data[0]){
+        //     headers.push(keys)
+        // }
+
+        // for(ele of headers){
+        //     const th = document.createElement("th")
+        //     th.textContent = ele[0].toUpperCase() + ele.slice(1) //karunakar =>K + ele.slice(1)
+        //     tableHeadingRow.appendChild(th)
+        // }
+
+        // for(objs of data){
+        //     const tableDataRows = document.createElement("tr")
+        //     for(key in objs){
+        //         console.log(key)
+        //         const td = document.createElement("td")
+        //         if(key == "isMockCleared"){
+        //                 td.textContent = objs[key] ? "Cleared" : "Not Cleared"
+        //             }else{
+        //                 td.textContent = objs[key]
+        //             }
+        //         tableDataRows.appendChild(td)
+        //     }
+        //     tbody.appendChild(tableDataRows)
+        // }
+
+        // thead.appendChild(tableHeadingRow);
+        // table.appendChild(thead)
+        // table.appendChild(tbody)
+
+        // tableContainer.appendChild(table)
+
+        // const row1 = table.insertRow();
+        // const cell1 = row1.insertCell(0)
+        // cell1.textContent = "john Doe"
+        // cell1.textContent = 'John Doe';
+        // const cell2 = row1.insertCell(1);
+        // cell2.textContent = 'john@example.com';
+        
+        // const row2 = tableBody.insertRow();
+        // const cell3 = row2.insertCell(0);
+        // cell3.textContent = 'Jane Smith';
+        // const cell4 = row2.insertCell(1);
+        // cell4.textContent = 'jane@example.com';
 
         // ellipsis(...)
         // const hello = document.getElementsByTagName("div");
