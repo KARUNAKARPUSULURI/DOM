@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button>Click me!</button> -->
+    <!-- <button id="myButton1">Button 1</button>
+    <button id="myButton2">         </button>
+    <script>
+        // const btn = document.getElementsByTagName("button")[0]
+        // console.dir(btn)
+        // // btn.addEventListener(eventtype, listener)
+        // btn.addEventListener("click", (a)=>{alert(`${a.target.textContent}`)})
+        // const content1 = document.querySelector("#myButton1").textContent
+        // const content2 = document.querySelector("#myButton2").textContent
+        const btn1 = document.querySelector("#myButton1").addEventListener("click", function(bt1){console.log(bt1);alert(bt1.srcElement.textContent)}) 
+        const btn2 = document.querySelector("#myButton2").addEventListener("click", ()=>{alert(content2)}) 
+        
+    </script> -->
+    <!-- <input type="text" id="searchBox" placeholder="Type here..." />
+    <div id="suggestions"></div>
+
+    <script>
+        const searchBox = document.getElementById("searchBox");
+        const suggestions = document.getElementById("suggestions");
+
+        searchBox.addEventListener("input", (e) => {
+            const query = e.target.value;
+            suggestions.textContent = query ? `Suggestions for: ${query}` : "";
+        });
+    </script> -->
+    <!-- <div id="box" style="width: 200px; height: 200px; background: lightgray; margin: 20px;"></div> -->
+    <!-- <script>
+        const box = document.getElementById("box");
+
+        // `click` event
+        box.addEventListener("click", () => console.log("Clicked on the box!"));
+
+        // `dblclick` event
+        // box.addEventListener("dblclick", () => console.log("Double-clicked on the box!"));
+
+        // // `mousedown` event
+        // box.addEventListener("mousedown", () => console.log("Mouse button pressed down on the box."));
+
+        // // `mouseup` event
+        // box.addEventListener("mouseup", () => console.log("Mouse button released over the box."));
+
+        // // `mouseenter` event
+        // box.addEventListener("mouseenter", () => console.log("Mouse entered the box."));
+
+        // // `mouseleave` event
+        // box.addEventListener("mouseleave", () => console.log("Mouse left the box."));
+
+        // // `mousemove` event
+        // box.addEventListener("mousemove", () => console.log("Mouse moving over the box."));
+
+        // // `mouseover` event
+        // box.addEventListener("mouseover", () => console.log("Mouse is over the box or its child."));    
+
+        // // `mouseout` event
+        // box.addEventListener("mouseout", () => console.log("Mouse moved out of the box or its child."));
+
+        
+   </script> -->
+    <!-- <input type="text" id="input" placeholder="Type something here">
+    <script>
+        const input = document.getElementById("input");
+
+        // `keydown` event
+        input.addEventListener("keydown", (e) => console.log(`Key down: ${e.key}`));
+
+        // `keypress` event (deprecated but still functional in some browsers)
+        input.addEventListener("keypress", (e) => console.log(`Key press: ${e.key}`));
+
+        // `keyup` event
+        input.addEventListener("keyup", (e) => console.log(`Key up: ${e.key}`));
+    </script> -->
+    <!-- <button>Click me</button> -->
+
+    <!-- <div>
+        <button>Click me</button>
+    </div>
+    <script>
+
+       b = document.getElementsByTagName("div")[0]
+       b.addEventListener("click", ()=>{
+        console.log("div");
+        
+        b.style.backgroundColor = "green"
+       })
+       a = document.getElementsByTagName("button")[0]
+       a.addEventListener("click", (e)=>{
+        
+        console.log("button");
+        
+        a.style.backgroundColor = "red"
+       }, true)
+    </script> -->
+    <!-- <script>
+        console.log("start")
+        const button = document.getElementById("button").addEventListener("click", ()=>{console.log("clicked")})
+        console.log("end")
+    </script> -->
+    <!-- <div style="width: 200px; height: 200px; background-color: lightgray; display: flex; justify-content: center; align-items: center;">
+        <button style="padding: 10px;">Click Me</button>
+    </div>
+    <script>
+        const div = document.getElementsByTagName("div")[0];
+        const button = document.getElementsByTagName("button")[0];
+    
+        // Bubbling listener on the div
+        div.addEventListener("click", () => {
+            console.log("div");
+            div.style.backgroundColor = "green";
+        });
+    
+        // Capturing listener on the button
+        button.addEventListener(
+            "click",
+            (e) => {
+                console.log("button");
+                button.style.backgroundColor = "red";
+    
+                // Optional: Prevent further event propagation
+                e.stopPropagation();
+            },
+            true // Capturing phase
+        );
+    </script> -->
+    <!-- 
+    <input type="text" id="search-bar" placeholder="Search...">
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+    </ul>
+
+    <script>
+        const searchBar = document.getElementById("search-bar");
+        const listItems = document.querySelectorAll("#list li");
+
+        searchBar.addEventListener("input", () => {
+            const searchTerm = searchBar.value.toLowerCase();
+
+            listItems.forEach((item) => {
+                if (item.textContent.toLowerCase().includes(searchTerm)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+
+    </script> -->
+
+    <!-- <button>Click me</button>
+
+    <script>
+        const button = document.getElementsByTagName("button")[0]
+        button.addEventListener("dblclick", ()=>{
+            const arr = ["red", "green", "yellow"];
+            const randColor = arr[Math.floor(Math.random()*arr.length)]
+            document.body.style.backgroundColor = randColor
+        });
+
+    </script> -->
+
+    <!-- <button style="width: 100px; height: 100px; background-color: aqua; cursor: pointer;">Hello</button>
+    <script>
+        const box = document.querySelector("button");
+        box.addEventListener("mousedown", () => {
+            alert("Mouse button pressed down on the box!");
+        });
+    </script> -->
+
+
+    <!-- <div id="parent">
+        <button class="btn">Click me</button>
+        <input type="text" class="input" />
+    </div>
+    <div id="values"></div> -->
+
+    <!-- <form action="" id="form">
+        <label for="name">Name:</label> -->
+        <!-- <button>Submit</button>
+    </form>
+    
+    <div id="parent">
+        <button class="btn">Click me</button>
+    </div>
+    <input type="text" id="name" name="name">
+    <div id="demo"></div>
+
+    <select id="options">
+        <option value="yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+    <script> -->
+        // const btn = document.getElementById("name")
+        // const opts = document.getElementById("options")
+
+        // opts.addEventListener("change", (e)=> {
+        //     console.log(e.target.value)
+        // })
+
+        // btn.addEventListener("change", (e)=>{
+        //     console.log(e.target.value)
+        //     const div = document.getElementById("demo")
+        //     div.innerText = e.target.value
+        // })
+
+        // table -> thead -> tr -> td(10)
+
+        // const form = document.getElementById("form")
+        // form.addEventListener("submit", (e)=>{
+        //     e.preventDefault()
+        //     console.log("form data")
+        // })
+        // const parent = document.getElementById("parent")
+
+        // parent.addEventListener("click", (e)=> {document.body.style.backgroundColor = "green"})
+        // btn.addEventListener("click", (e)=> {e.stopPropagation();document.body.style.backgroundColor = "red"})
+
+        // two phases:- 1.capturing, 2.bubbling
+
+
+        // parent -> body -> div -> child
+
+        // const form = document.getElementById("form");
+
+        // const inp = document.getElementById("name").value
+
+        // console.dir(inp)
+
+        //mouse event types:- click, dblclick, mouseup, mousedown, mouseover, etc.,
+
+    //    const btn = document.querySelector("#parent"); 
+    //    const demo = document.querySelector("#values"); 
+    //    const inputValue = document.querySelector(".input");
+    //    inputValue.addEventListener("keydown", (e)=>{
+    //     console.log("key pressed",e.key)
+    //     demo.textContent = e.key
+    //    })
+    //    var func =  (e) =>{
+    //         console.log(e.clientX, e.clientY)
+    //         const colors = ["red", "blue", "green", "yellow", "orange"];
+    //         const randomColor = colors[Math.floor(Math.random()* colors.length)] //5* 0.1 => 0.5
+    //         document.body.style.backgroundColor = randomColor
+    //         // Math.random => 0-1
+    //     }
+        
+        // btn.addEventListener("click", (e) =>{
+        //     console.log(e.clientX, e.clientY)
+        //     const colors = ["red", "blue", "green", "yellow", "orange"];
+        //     const randomColor = colors[Math.floor(Math.random()* colors.length)] //5* 0.1 => 0.5
+        //     document.body.style.backgroundColor = randomColor
+        //     // Math.random => 0-1
+        // })
+        // btn.removeEventListener("click", func, false)
+     
+
+    // </script>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

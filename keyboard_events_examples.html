@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Keyboard Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      width: 300px;
+    }
+    .event-output {
+      margin-top: 20px;
+    }
+    .output {
+      margin-bottom: 10px;
+      padding: 8px;
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Real-Time Key Events Example</h2>
+  <input type="text" id="input" placeholder="Type something here">
+  
+  <div class="event-output">
+    <div class="output" id="keydown-output">Key down: </div>
+    <div class="output" id="keypress-output">Key press: </div>
+    <div class="output" id="keyup-output">Key up: </div>
+  </div>
+
+  <script>
+    const input = document.getElementById("input");
+
+    // `keydown` event
+    input.addEventListener("keydown", (e) => {
+      document.getElementById("keydown-output").textContent = `Key down: ${e.key}`;
+    });
+
+    // `keypress` event (deprecated but still functional in some browsers)
+    input.addEventListener("keypress", (e) => {
+      document.getElementById("keypress-output").textContent = `Key press: ${e.key}`;
+    });
+
+    // `keyup` event
+    input.addEventListener("keyup", (e) => {
+      document.getElementById("keyup-output").textContent = `Key up: ${e.key}`;
+    });
+  </script>
+
+</body>
+</html>
