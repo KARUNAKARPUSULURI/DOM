@@ -1,0 +1,154 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search-bar" placeholder="Search...">
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+    </ul>
+
+    <script>
+        const searchBar = document.getElementById("search-bar");
+        const listItems = document.querySelectorAll("#list li");
+
+        searchBar.addEventListener("input", () => {
+            const searchTerm = searchBar.value.toLowerCase();
+
+            listItems.forEach((item) => {
+                if (item.textContent.toLowerCase().includes(searchTerm)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+
+    </script> 
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country, State, City</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        select {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Country, State, City Selector</h1>
+    <div>
+        <label for="country">Select Country:</label>
+        <select id="country">
+            <option value="" disabled selected>Select a country</option>
+        </select>
+
+        <label for="state">Select State:</label>
+        <select id="state">
+            <option value="" disabled selected>Select a state</option>
+        </select>
+
+        <label for="city">Select City:</label>
+        <select id="city">
+            <option value="" disabled selected>Select a city</option>
+        </select>
+    </div>
+
+    <script>
+        const locationData = {
+            India: {
+                Maharashtra: ["Mumbai", "Pune", "Nagpur"],
+                Gujarat: ["Ahmedabad", "Surat", "Vadodara"],
+                Karnataka: ["Bangalore", "Mysore", "Hubli"]
+            },
+            USA: {
+                California: ["Los Angeles", "San Francisco", "San Diego"],
+                Texas: ["Houston", "Dallas", "Austin"],
+                Florida: ["Miami", "Orlando", "Tampa"]
+            },
+            Canada: {
+                Ontario: ["Toronto", "Ottawa", "Hamilton"],
+                Alberta: ["Calgary", "Edmonton", "Red Deer"],
+                Quebec: ["Montreal", "Quebec City", "Laval"]
+            }
+        };
+
+        const countrySelect = document.getElementById("country");
+        const stateSelect = document.getElementById("state");
+        const citySelect = document.getElementById("city");
+
+        for (const country in locationData) {
+            const option = document.createElement("option");
+            option.value = country;
+            option.textContent = country;
+            countrySelect.appendChild(option);
+        }
+
+        countrySelect.addEventListener("change", () => {
+            stateSelect.innerHTML = '<option value="" disabled selected>Select a state</option>'; 
+            citySelect.innerHTML = '<option value="" disabled selected>Select a city</option>'; 
+
+            const selectedCountry = countrySelect.value;
+            const states = locationData[selectedCountry];
+
+            for (const state in states) {
+                const option = document.createElement("option");
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            }
+        });
+
+        stateSelect.addEventListener("change", () => {
+            citySelect.innerHTML = '<option value="" disabled selected>Select a city</option>'; 
+
+            const selectedCountry = countrySelect.value;
+            const selectedState = stateSelect.value;
+            const cities = locationData[selectedCountry][selectedState];
+
+            cities.forEach((city) => {
+                const option = document.createElement("option");
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
