@@ -8,13 +8,23 @@
 <body>
     <script>
         const getUsername = sessionStorage.getItem("username")
-        console.log(getUsername)
-
-        const obj = localStorage.getItem("details")
-        const obj2 =JSON.parse(obj)
-        console.log(obj2.name)
         
+        console.log()
+        const gettingName = localStorage.getItem("data")
+        console.log(gettingName.name)
+        const name = JSON.parse(gettingName)
+        console.log(name.name)
 
+        // form.addEventListener(()=>{
+        //     const email = document.getElementById("email").value
+        //     const pass = document.getElementById("pass").value
+        //     const formData = {
+        //         email: email,
+        //         password: pass
+        //     }
+
+        //     localStorage.setItem("formData", formData)
+        // })
 
     </script>
 </body>
