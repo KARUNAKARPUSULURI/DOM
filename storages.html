@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- WEB APIS ->  -->
+    <script>
+        //     console.log("start")
+        //     let countDown = 10
+
+        //    const timeoutId = setTimeout(()=>{
+        //         console.log(countDown) //10
+        //         countDown--
+
+        //     },200)
+
+        //     console.log("end")
+        // setTimeout(()=>{
+        //     console.log("hello, Im back after 5 secs")
+        // },1000)
+        // console.log("------------------------------------------------------------------")
+        // setInterval(()=>{
+        //     console.log("hello, Im back after 5 secs")
+        // },1000)
+
+        // const colors = ["red", "green", "yellow", "orange", "purple"];
+        // index = 0;
+
+        // const intervalId = setInterval(() => {
+        //     document.body.style.backgroundColor = colors[index]
+        //     index = (index + 1) % colors.length //2%5 => 1
+        // }, 1000) //
+
+        // setTimeout(()=>{
+        //     clearInterval(intervalId)
+        // }, 10000)
+
+        // function greet(){
+        //     setInterval(()=>{console.log("hi 1")},1000)
+        //     setInterval(()=>{console.log("hi 2")},1000)
+        //     setInterval(()=>{console.log("hi 3")},1000)
+        //     setInterval(()=>{console.log("hi 4")},1000)
+        // }
+        // clearInterval(greet)
+
+        // for(var i=0; i<5; i++){
+        //     setTimeout(()=>{
+        //         console.log(i)
+        //     },1000)
+        // }
+
+        // storages:- retriving
+
+        const obj = {
+            name: "karunakar",
+            age: 35,
+            address: {
+                street: "street1",
+                city: "city1",
+                state: "state1"
+            }
+        }
+
+        localStorage.setItem("details", JSON.stringify(obj))
+
+        // // JSON methods:- 1.Stringfy, 2.parse
+        // console.log(JSON.stringify(obj))
+
+        // const obj2 = {
+        //     "id": 1,
+        //     "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        //     "price": 109.95,
+        //     "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        //     "category": "men's clothing",
+        //     "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        //     "rating": {
+        //         "rate": 3.9,
+        //         "count": 120
+        //     }
+        // }
+
+        // // console.log(obj["name"])
+        // // console.log(JSON.parse(JSON.stringify(obj2)))
+
+
+        // sessionStorage.setItem("username", "karunakar")
+        // sessionStorage.setItem("password", "password")
+        // sessionStorage.setItem("gender", "male")
+        // sessionStorage.setItem("mobileno", "9876543211")
+
+        // setTimeout(() => {
+        //     sessionStorage.removeItem("mobileno")
+        // }, 2000)
+
+        // console.log(String.fromCharCode(97))
+        // const date = new Date()
+        const persons = [{ age: 20, totalmarks: 200 }, { age: 16, totalmarks: 100 }, { age: 25, totalmarks: 400 }, { age: 28, totalmarks: 50 }]
+
+    </script>
+</body>
+
+</html>

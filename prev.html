@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="forward1">Forward</button>
+    <script src="bom.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Enhanced Validations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .otp-section {
+            display: none;
+            margin-top: 20px;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+            font-weight: bold; 
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Register</h1>
+    <form id="registerForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter at least 3 characters" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="8+ characters, incl. uppercase, lowercase, number, symbol" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="" disabled selected>Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" placeholder="Enter a 10-digit number" required>
+
+        <label>
+            <input type="checkbox" id="terms" required> I agree to the terms and conditions
+        </label>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="otp-section" id="otpSection">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otp" placeholder="Enter 6-digit OTP">
+        <button id="verifyOtp">Verify OTP</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script>
+        let generatedOtp = null;
+
+        const form = document.getElementById("registerForm");
+        const otpSection = document.getElementById("otpSection");
+        const messageDiv = document.getElementById("message");
+        const verifyOtpButton = document.getElementById("verifyOtp");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+            const gender = document.getElementById("gender").value;
+            const mobile = document.getElementById("mobile").value.trim();
+
+            if (username.length < 3) {
+                showMessage("Username must be at least 3 characters long.", "error");
+                return;
+            }
+
+            if (password.length <= 8) {
+                showMessage(
+                    "Password must be at least 8 characters long, include uppercase, lowercase, a number, and a special character.",
+                    "error"
+                );
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showMessage("Passwords do not match.", "error");
+                return;
+            }
+
+            if (mobile.length !== 10 || isNaN(mobile)) {
+                showMessage("Mobile number must be exactly 10 numeric digits.", "error");
+                return;
+            }
+
+            generatedOtp = Math.floor(Math.random()*1000000); 
+            console.log("Generated OTP:", generatedOtp); 
+
+            otpSection.style.display = "block";
+            showMessage("OTP sent successfully! Please enter the OTP below.", "success");
+        });
+
+        verifyOtpButton.addEventListener("click", () => {
+            const enteredOtp = document.getElementById("otp").value.trim();
+
+            if (enteredOtp == generatedOtp) {
+                showMessage("Registration successful! Welcome!", "success");
+                otpSection.style.display = "none";
+                form.reset(); 
+            } else {
+                showMessage("Invalid OTP. Please try again.", "error");
+            }
+        });
+
+        function showMessage(msg, type) {
+            messageDiv.textContent = msg;
+            messageDiv.className = type;
+        }
+    </script>
+</body>
+</html>  -->
