@@ -118,6 +118,16 @@ console.log(boundfunc3())
 console.log(boundfunc4())
 console.log(boundfunc5())
 
+space complexity:-
+O(1) because we are not using any extra space. we are just using the existing space
+time complexity:-
+O(1) because we are not doing any loop or recursion. we are just calling the function
+
+
+
+
+
+
 
 
 
